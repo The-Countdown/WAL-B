@@ -56,4 +56,6 @@ public class Robot {
     public Drive drive = new Drive(this);
     public Head head = new Head(this);
     public Arm arm = new Arm(this);
+
+    //extends Robot.HardwareDevices means it only extends things starting with HardwareDevices in the Robot class
 }

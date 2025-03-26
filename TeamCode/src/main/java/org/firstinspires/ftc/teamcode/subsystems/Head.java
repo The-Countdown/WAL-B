@@ -16,7 +16,7 @@ public class Head extends Robot.HardwareDevices {
         Robot.HardwareDevices.headRotation.setPosition(servoDegree / 270);
     }
 
-    public void servoTurnTuah(double turnTuah){
+    public void servoRoatation(double turnTuah){
         if (turnTuah > 1) {
             turnTuah = 1;
         } else if (turnTuah < 0) {
@@ -24,7 +24,7 @@ public class Head extends Robot.HardwareDevices {
         }
         Robot.HardwareDevices.headRotation.setPosition(turnTuah);
     }
-    public void eyeServoTurnTuah(double eyeTurnTuah) {
+    public void eyeRoatation(double eyeTurnTuah) {
         if (eyeTurnTuah > 1) {
             eyeTurnTuah = 1;
         } else if (eyeTurnTuah < 0) {

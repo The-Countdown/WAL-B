@@ -14,7 +14,7 @@ public class Arm extends Robot.HardwareDevices {
         Robot.HardwareDevices.rightArm.setPower(power);
     }
 
-    public void setPosition(int pose) {
+    public void armPosition(int pose) {
         Robot.HardwareDevices.leftArm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         Robot.HardwareDevices.rightArm.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         Robot.HardwareDevices.leftArm.setTargetPosition(pose);

@@ -21,25 +21,25 @@ public class TeleOpTesting extends LinearOpMode {
             // Runs repeatedly
             double rMotorPower = gamepad1.right_stick_y;
             double lMotorPower = gamepad1.left_stick_y;
-
+            //drive
             walB.drive.setPower(lMotorPower, rMotorPower);
-
+            //head turn
             if (gamepad1.dpad_left) {
-                walB.head.servoTurnTuah(Robot.HardwareDevices.headRotation.getPosition() - 0.002);
+                walB.head.servoRoatation(Robot.HardwareDevices.headRotation.getPosition() - 0.002);
             } else if (gamepad1.dpad_right) {
-                walB.head.servoTurnTuah(Robot.HardwareDevices.headRotation.getPosition() + 0.002);
+                walB.head.servoRoatation(Robot.HardwareDevices.headRotation.getPosition() + 0.002);
             }
-
+            //eye turn
             if (gamepad1.dpad_down) {
-                walB.head.eyeServoTurnTuah(Robot.HardwareDevices.eyeRotation.getPosition() - 0.002);
+                walB.head.eyeRoatation(Robot.HardwareDevices.eyeRotation.getPosition() - 0.002);
             } else if (gamepad1.dpad_up) {
-                walB.head.eyeServoTurnTuah(Robot.HardwareDevices.eyeRotation.getPosition() + 0.002);
+                walB.head.eyeRoatation(Robot.HardwareDevices.eyeRotation.getPosition() + 0.002);
             }
-
+            //arm up down
             double armPower = gamepad1.right_trigger - gamepad1.left_trigger;
 
             walB.arm.armPower(armPower);
-//            walB.arm.setPosition();
+            //walB.arm.armPosition();
 
             telemetry.addData("left arm pose", Robot.HardwareDevices.leftArm.getCurrentPosition());
             telemetry.addData("right arm pose", Robot.HardwareDevices.rightArm.getCurrentPosition());
