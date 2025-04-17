@@ -7,6 +7,7 @@ public class Head extends Robot.HardwareDevices {
         this.walB = walB;
     }
 
+
     public void servoTurn(double servoDegree){
         if (servoDegree > 270) {
             servoDegree = 270;
